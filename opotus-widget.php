@@ -75,7 +75,10 @@ function opotus_payment_widget_settings() {
         "opotus_widget-secret_key");
     register_setting(
         "opotus_widget_config",
-        "opotus_widget-callback_url");
+        "opotus_widget-authorized_url");
+    register_setting(
+        "opotus_widget_config",
+        "opotus_widget-order_successful_page_url");
 }
 add_action("admin_init", "opotus_payment_widget_settings");
 
@@ -93,9 +96,14 @@ function opotus_widget_config_options() {
                                                echo stripslashes_deep(esc_attr(get_option('opotus_widget-secret_key'))); ?>" /></p>
 
         <br>
-        <p><strong>Callback URL: </strong> <input type="text" name="opotus_widget-callback_url"
+        <p><strong>Authorized callback URL: </strong> <input type="text" name="opotus_widget-callback_url"
                                                   value="<?php
                                                   echo stripslashes_deep(esc_attr(get_option('opotus_widget-callback_url'))); ?>" /></p>
+
+        <br>
+        <p><strong>Order successful page URL: </strong><input type="text" name="opotus_widget-order_successful_page_url"
+                                               value="<?php
+                                               echo stripslashes_deep(esc_attr(get_option('opotus_widget-order_successful_page_url'))); ?>" /></p>
     </div>
     <?php
 }
