@@ -1,0 +1,14 @@
+{
+  "name": "wp-opotus-wrapper",
+  "version": "1.0.0",
+  "description": "=== Opotus Widget Plugin === Contributors: Opotus Tags: Opotus Widget Plugin, Opotus Dropins Wordpress/Woocommerce Requires at least: 4.5 Tested up to: 4.7.4 Stable tag: 3.0 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "opotus-widget": "^1.1.0"
+  }
+}

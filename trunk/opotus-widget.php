@@ -22,7 +22,6 @@
  *            License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-
 function opotus_add_menu()
 {
     add_submenu_page(
@@ -43,8 +42,7 @@ function opotus_init_page()
     ?>
     <div class="wrap">
         <h1>
-            Hello World Plugin Template By <a
-                href="https://crunchify.com/optimized-sharing-premium/" target="_blank">Crunchify</a>
+            Opotus widget configuration panel
         </h1>
 
         <form method="post" action="options.php">
@@ -96,9 +94,9 @@ function opotus_widget_config_options() {
                                                echo stripslashes_deep(esc_attr(get_option('opotus_widget-secret_key'))); ?>" /></p>
 
         <br>
-        <p><strong>Authorized callback URL: </strong> <input type="text" name="opotus_widget-callback_url"
+        <p><strong>Authorized callback URL: </strong> <input type="text" name="opotus_widget-authorized_url"
                                                   value="<?php
-                                                  echo stripslashes_deep(esc_attr(get_option('opotus_widget-callback_url'))); ?>" /></p>
+                                                  echo stripslashes_deep(esc_attr(get_option('opotus_widget-authorized_url'))); ?>" /></p>
 
         <br>
         <p><strong>Order successful page URL: </strong><input type="text" name="opotus_widget-order_successful_page_url"
@@ -107,3 +105,5 @@ function opotus_widget_config_options() {
     </div>
     <?php
 }
+
+include( plugin_dir_path( __FILE__ ) . "src/opotus-shortcode.php");
